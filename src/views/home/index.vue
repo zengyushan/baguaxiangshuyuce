@@ -157,7 +157,7 @@
           <span @click="reset">清空</span>
         </div>
         <div class="number" v-show="functionType=='number'">
-          <el-input class="input" type="number" v-model="params.numbers" placeholder="请输入数字"/>
+          <el-input class="input" type="number" v-model="params.numbers" placeholder="请输入一串数字"/>
         </div>
         <!--        <div class="strlen">-->
         <!--          <el-input class="input" type="number" v-model="params.strlen" placeholder="请输入字数"/>-->
@@ -638,7 +638,7 @@ export default {
       let month = this.ganzhi[lunar.getMonthZhiExact()].month;//月以月令交节为准
       let day = lunar.getDay();
       let hour = this.ganzhi[lunar.getTimeZhi()].hour;
-      console.log(year, month, day, hour)
+      console.log('年月日时',year, month, day, hour)
 
       let upHe = year + month + day
       let upYuShu = upHe % 8 === 0 ? 8 : upHe % 8
