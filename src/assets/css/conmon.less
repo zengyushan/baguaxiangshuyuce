@@ -1,0 +1,342 @@
+@charset "UTF-8";
+
+/* 格式化样式 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+body,
+div,
+form,
+input,
+button,
+th,
+td,
+ol,
+ul,
+dl,
+li,
+dd,
+dt {
+  margin: 0;
+  padding: 0;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+fieldset,
+img {
+  vertical-align: middle;
+  border: 0;
+}
+caption,
+th {
+  text-align: left;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+html {
+  /* AntD 字体家族：https://ant.design/docs/spec/font-cn#%E5%AD%97%E4%BD%93%E5%AE%B6%E6%97%8F */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+a:hover {
+  color: #31ccff;
+}
+input {
+  outline: 0;
+}
+/* 超出隐藏 */
+.dn {
+  display: none;
+}
+//单行
+.cont {
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+//多行
+.cont2 {
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+//给需要去除的元素添加 `not-print` 类样式
+@media print {
+  .not-print {
+    opacity: 0;
+  }
+}
+/* 文字排版 */
+.f12 {
+  font-size: 12px;
+}
+.f14 {
+  font-size: 14px;
+}
+.f16 {
+  font-size: 16px;
+}
+.f18 {
+  font-size: 18px;
+}
+.f20 {
+  font-size: 20px;
+}
+.ti2 {
+  text-indent: 2em;
+}
+/* 必填星号 */
+.isMust {
+  position: absolute;
+  color: #f56c6c;
+  top: 2px;
+  left: -77px;
+}
+/* 版心 */
+.contaiter {
+  width: 1200px;
+  margin: 0 auto;
+}
+/* 盒子模式 */
+.bs {
+  box-sizing: border-box;
+}
+/* 宽高  */
+.w100 {
+  width: 100%;
+}
+.h100 {
+  height: 100%;
+}
+.wv100 {
+  width: 100vh;
+}
+.hv100 {
+  height: 100vh;
+}
+.p10 {
+  padding: 10px;
+}
+.p20 {
+  padding: 20px;
+}
+.p30 {
+  padding: 30px;
+}
+.p40 {
+  padding: 40px;
+}
+
+.mt20 {
+  margin-top: 20px;
+}
+.mt30 {
+  margin-top: 30px;
+}
+.mt40 {
+  margin-top: 40px;
+}
+
+.mr10 {
+  margin-right: 10px;
+}
+.mr20 {
+  margin-right: 20px;
+}
+.mr30 {
+  margin-right: 30px;
+}
+
+.ml10 {
+  margin-left: 10px;
+}
+.ml20 {
+  margin-left: 20px;
+}
+.ml30 {
+  margin-left: 30px;
+}
+
+.mtb20 {
+  margin: 20px 0;
+}
+.mtb40 {
+  margin: 40px 0;
+}
+
+.mb10 {
+  margin-bottom: 10px;
+}
+.mb20 {
+  margin-bottom: 20px;
+}
+.mb40 {
+  margin-bottom: 40px;
+}
+
+/* 颜色 */
+.bg-fff {
+  background: #fff;
+}
+.bg-f6 {
+  background: #f6f6f6;
+}
+.col-fff {
+  color: #fff;
+}
+.col-2b {
+  color: #2d2d2d;
+}
+
+/* 定位 */
+.pr {
+  position: relative;
+}
+.pf {
+  position: fixed;
+}
+.pa {
+  position: absolute;
+}
+.pac {
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  transform: translate(50% 50%);
+}
+.tac {
+  text-align: center;
+}
+.tal {
+  text-align: left;
+}
+.tar {
+  text-align: right;
+}
+/* 弹性布局 */
+.df {
+  display: flex;
+}
+.jcc {
+  justify-content: center;
+}
+.aic {
+  align-items: center;
+}
+.jcsb {
+  justify-content: space-between;
+}
+.jcsa {
+  justify-content: space-around;
+}
+.jcfe {
+  justify-content: flex-end;
+}
+.fww {
+  flex-wrap: wrap;
+}
+.jcl {
+  justify-content: left;
+}
+.jcr {
+  justify-content: right;
+}
+.fdc {
+  flex-direction: column;
+}
+.aifs {
+  align-items: flex-start;
+}
+.aife {
+  align-items: flex-end;
+}
+.dis_sb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.dis_cc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// /* 针对整个页面的滚动条 */
+// /* 宽度 */
+// ::-webkit-scrollbar {
+//   width: 5px; /* Chrome, Safari, Opera */
+// }
+
+// /* 滚动条滑块 */
+// ::-webkit-scrollbar-thumb {
+//   background: #888; /* 滑块颜色 */
+//   border-radius: 5px; /* 滑块圆角 */
+// }
+
+// /* 滚动条轨道 */
+// ::-webkit-scrollbar-track {
+//   background: #f1f1f1; /* 轨道颜色 */
+//   border-radius: 5px; /* 轨道圆角 */
+// }
+
+// /* Firefox */
+// * {
+//   scrollbar-width: thin; /* 滚动条宽度 */
+//   scrollbar-color: #888 #f1f1f1; /* 滑块颜色和轨道颜色 */
+// }
+
+// /* 特定元素的滚动条样式 */
+// .scroll-container {
+//   /* 假设这是你想要自定义滚动条样式的元素 */
+//   height: 200px;
+//   overflow-y: scroll; /* 启用滚动 */
+
+//   /* 你可以在这里再次定义滚动条样式，但通常浏览器会继承全局样式 */
+// }
+
+::-webkit-scrollbar {
+  cursor: pointer;
+  width: 0.45rem;
+  height: 0.45rem;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* 修改滚动条滑块悬停时的样式 */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+  /* 悬停时的滑块颜色 */
+  width: 12px;
+  /* 悬停时的滑块宽度 */
+}
